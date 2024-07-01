@@ -1,0 +1,113 @@
+.thumbnail {
+    /* removing width so that thumbnails take equal space due to CSS grid property */
+    /* width: 300px; */
+    width: 100%;
+    /* height: 300px; */
+    /* if resolution doesn't match, choose how and what part of the
+    image will be displayed, keeping its resolution intact */
+    /* object-fit: contain;
+    object-position: left;
+    border-width: 2px;
+    border-style: solid;
+    border-color: red; */
+}
+
+/* .video-title {
+    width: 300px;
+} */
+
+/* .video-preview {
+    width: 300px;
+    // converting div to inline block since we want more divs beside.
+    // div by default is a block element
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15px;
+} */
+
+.video-title {
+    margin-top: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+.video-info-grid {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+
+/* .channel-picture {
+    // display: inline-block;
+    width: 50px;
+    vertical-align: top;
+    background-color: gray;
+}
+
+.video-info {
+    // display: inline-block;
+    width: 250px;
+    background-color: gray;
+} */
+
+.profile-picture {
+    /* will take up whole width of the container it is located inside */
+    width: 36px;
+    border-radius: 50px;
+}
+
+.thumbnail-row {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.video-author, .video-stats {
+    font-size: 12px;
+    color: rgb(96, 96, 96);
+}
+
+.video-author {
+    margin-bottom: 4px;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
+}
+
+/* css lines will activate only when width is 600px or less */
+@media (max-width: 750px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 751px) and (max-width: 999px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1000px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.video-time {
+    font-size: 12px;
+    font-weight: 500;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 2px;
+    background-color: black;
+    color: white;
+    position: absolute;
+    bottom: 8px;
+    right: 5px;
+}
